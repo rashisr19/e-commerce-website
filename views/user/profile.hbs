@@ -1,0 +1,17 @@
+<h1>user profile</h1>
+<br>
+<h2>My orders</h2>
+{{#each orders }}
+    <div class="card">
+    <ul class="list-group list-group-flush">
+        {{#each this.item }}
+            <li class="list-group-item">Cras justo odio<span class="badge">{{this.price}}</span>
+                {{ this.item.title }} | {{ this.qty }} Units
+            </li>
+        {{/each}}
+    </ul>
+    <div class="card-footer">
+        {{ this.cart.totalPrice }}
+    </div>
+    </div>
+{{/each}}

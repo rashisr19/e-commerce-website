@@ -1,0 +1,55 @@
+<div class="row">
+    <div class="col-sm-6 col-md-4 ">
+        <div id="success" class="alert alert-success" {{#if noMessages}}hidden{{/if}}>
+            {{successMsg}}
+        </div>
+    </div>
+</div>
+
+
+{{# each products}} 
+    <div class="row">
+    {{# each this}} 
+        <div class = "col">
+            <div class="card" style = "background-image: url('/images/Rectangle14.jpg'); border-radius : 0px; width : 70%; margin:0 auto;">
+                <img src= "{{ this.imagePath }}" class="card-img-top" style="width: 168.5px;height: 245.5px;left: 173px;top: 310.82px;" alt="...">
+                <div class="card-body" style = "font-family: 'Nunito', sans-serif; font-size : 13px; position:absolute; left : 200.2px; top:20px; color : #333333; ">
+                    {{!-- <p>{{ this.title}}</p> --}}
+                    <strong><p>{{ this.description}}</p>
+                    <p>{{ this.description}}</p>
+                    <p>{{ this.description}}</p></strong>
+                    <div> <strong style=" font-family: 'Nunito', sans-serif;font-size : 14px;padding-bottom:50px; padding-right : 400px;">₹{{this.price}}</strong>
+                        <a href = "/add-to-cart/{{this._id}}"><button type="button" class="btn" style = "font-family: 'Taviraj', serif;"><strong>Buy</strong></button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+    </div>
+    <br>
+{{/each}}
+
+{{!-- <div class="card" style = "background-image: url('/images/Rectangle14.jpg'); border-radius : 0px; width : 70%; height:250px; margin:0 auto;">
+    <img src= "/images/image8.png" class="card-img-top" style="width: 168.5px;height: 245.5px;left: 173px;top: 310.82px;" alt="...">
+    <div class="card-body" style = "font-family: 'Nunito', sans-serif; font-size : 13px; position:absolute; left : 200.2px; top:20px; color : #333333; ">
+        <p>MATOA Way Kambas - This wood is chosen to represent the Sumatran Rhino's skin which is designed with an overlap effect on its strap to represent Rhino's skin.</p>
+        <p>MATOA Way Kambas - This wood is chosen to represent the Sumatran Rhino's skin which is designed with an overlap effect on its strap to represent Rhino's skin.</p>
+        <p>MATOA Way Kambas - This wood is chosen to represent the Sumatran Rhino's skin which is designed with an overlap effect on its strap to represent Rhino's skin.</p>
+        <div> <strong style=" font-family: 'Nunito', sans-serif;font-size : 14px;padding-bottom:50px; padding-right : 400px;">₹14,999</strong>
+            <button type="button" class="btn" style = "font-family: 'Taviraj', serif;">Buy</button>
+        </div>
+    </div>
+</div>
+<br>
+<div class="card" style = "background-image: url('/images/Rectangle14.jpg'); border-radius : 0px; width : 70%; height : 260px; margin:0 auto;">
+    <img src= "/images/men.png" class="card-img-top" style="width: 170px;height: 255px;left: 173px;top: 310.82px;" alt="...">
+    <div class="card-body" style = "font-family: 'Nunito', sans-serif; font-size : 13px; position:absolute; left : 200.2px; top:20px; color : #333333; ">
+        <p>MATOA Way Kambas - This wood is chosen to represent the Sumatran Rhino's skin which is designed with an overlap effect on its strap to represent Rhino's skin.</p>
+        <p>MATOA Way Kambas - This wood is chosen to represent the Sumatran Rhino's skin which is designed with an overlap effect on its strap to represent Rhino's skin.</p>
+        <p>MATOA Way Kambas - This wood is chosen to represent the Sumatran Rhino's skin which is designed with an overlap effect on its strap to represent Rhino's skin.</p>
+        <div> <strong style=" font-family: 'Nunito', sans-serif;font-size : 14px;padding-bottom:50px; padding-right : 400px;">₹13,999</strong>
+            <button type="button" class="btn" style = "font-family: 'Taviraj', serif;">Buy</button>
+        </div>
+    </div>
+</div>
+<br> --}}

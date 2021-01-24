@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light " style="background-color: white; box-shadow:0px 0.5px #CBC7C7">
+  <a class="navbar-brand" href='/'><img src = "/images/Logo.png"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li>
+    </ul>
+    {{!-- shopping cart --}}
+      <a class="nav-link" href="/shopping-cart"><i class="fa fa-shopping-bag" aria-hidden="true"></i>
+        <span class="badge" style = "top : -4px; right: -4px;padding: 2px 4px;border-radius: 50%;background: #474545;color: white;font-size:9px;">{{session.cart.totalQty}}</span>
+      </a>
+    <div class="navbar-nav mr-sm-4 nav-item dropdown">
+      {{!-- userlogo --}}
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle" aria-hidden="true"></i>
+        </a>
+         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          {{#if login}}
+            <a class="dropdown-item" href="/user/profile">Profile</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/user/logout">Logout</a>
+            {{else}}
+            <a class="dropdown-item" href="/user/signup">Sign Up</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/user/login">Login</a>  
+          {{/if}} 
+        </div>
+      </div>
+  </div>
+</nav>
+<br>
